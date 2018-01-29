@@ -34,8 +34,13 @@
             this.lblN = new System.Windows.Forms.Label();
             this.lblK = new System.Windows.Forms.Label();
             this.rtbResult = new System.Windows.Forms.RichTextBox();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.lblResultRtb = new System.Windows.Forms.Label();
+            this.txtResult = new System.Windows.Forms.TextBox();
+            this.gbResult = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.nupN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupK)).BeginInit();
+            this.gbResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -115,20 +120,60 @@
             this.rtbResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.rtbResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.rtbResult.Location = new System.Drawing.Point(15, 41);
+            this.rtbResult.Location = new System.Drawing.Point(13, 100);
             this.rtbResult.Name = "rtbResult";
             this.rtbResult.ReadOnly = true;
-            this.rtbResult.Size = new System.Drawing.Size(573, 434);
+            this.rtbResult.Size = new System.Drawing.Size(459, 365);
             this.rtbResult.TabIndex = 5;
             this.rtbResult.Text = "";
             this.rtbResult.TextChanged += new System.EventHandler(this.rtbResult_TextChanged);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(10, 28);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(237, 17);
+            this.lblResult.TabIndex = 6;
+            this.lblResult.Text = "Total number of arrays Hero likes is:";
+            // 
+            // lblResultRtb
+            // 
+            this.lblResultRtb.AutoSize = true;
+            this.lblResultRtb.Location = new System.Drawing.Point(10, 78);
+            this.lblResultRtb.Name = "lblResultRtb";
+            this.lblResultRtb.Size = new System.Drawing.Size(145, 17);
+            this.lblResultRtb.TabIndex = 7;
+            this.lblResultRtb.Text = "Arrays Hero likes are:";
+            // 
+            // txtResult
+            // 
+            this.txtResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtResult.Location = new System.Drawing.Point(13, 49);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.Size = new System.Drawing.Size(234, 22);
+            this.txtResult.TabIndex = 8;
+            // 
+            // gbResult
+            // 
+            this.gbResult.Controls.Add(this.lblResult);
+            this.gbResult.Controls.Add(this.txtResult);
+            this.gbResult.Controls.Add(this.rtbResult);
+            this.gbResult.Controls.Add(this.lblResultRtb);
+            this.gbResult.Location = new System.Drawing.Point(12, 42);
+            this.gbResult.Name = "gbResult";
+            this.gbResult.Size = new System.Drawing.Size(487, 471);
+            this.gbResult.TabIndex = 9;
+            this.gbResult.TabStop = false;
+            this.gbResult.Text = "Result";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 487);
-            this.Controls.Add(this.rtbResult);
+            this.ClientSize = new System.Drawing.Size(510, 524);
+            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.lblK);
             this.Controls.Add(this.lblN);
             this.Controls.Add(this.nupK);
@@ -138,6 +183,8 @@
             this.Text = "Hero\'s Arrays";
             ((System.ComponentModel.ISupportInitialize)(this.nupN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupK)).EndInit();
+            this.gbResult.ResumeLayout(false);
+            this.gbResult.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +198,10 @@
         private System.Windows.Forms.Label lblN;
         private System.Windows.Forms.Label lblK;
         private System.Windows.Forms.RichTextBox rtbResult;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblResultRtb;
+        private System.Windows.Forms.TextBox txtResult;
+        private System.Windows.Forms.GroupBox gbResult;
     }
 }
 

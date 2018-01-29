@@ -19,13 +19,18 @@ namespace Algoritme_Detyra2
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            txtResult.Clear();
+            rtbResult.Clear();
+
             try
             {
+
                 DivFree df = new DivFree();
-                int n = (int)nupN.Value, k = (int)nupK.Value;
-                int res = df.dfcount(n, k);
+                int res = df.dfcount((int)nupN.Value, (int)nupK.Value);
+                txtResult.Text = res.ToString();
                 rtbResult.Text = df.QueueToString();
-                MessageBox.Show(String.Format("Total number of arrays Hero likes is: {0}", res.ToString()), "Result");
+
             }
             catch (Exception ex)
             {

@@ -15,6 +15,9 @@ namespace Algoritme_Detyra2
 
         public int dfcount(int n, int k)
         {
+            if (n < 1 || n > 50000 || k < 1 || k > 50000)
+                throw new Exception("N and K will be between 1 and 50000, inclusive.");
+
             N = n;
             K = k;
             Q = new Queue<List<int>>();
@@ -43,7 +46,7 @@ namespace Algoritme_Detyra2
                 }         
             }
 
-            return Q.Count();
+            return (Q.Count() % 1000000007);
         }
 
         private void GenArray()
