@@ -22,15 +22,21 @@ namespace Algoritme_Detyra2
             try
             {
                 DivFree df = new DivFree();
-                int n = 5, k = 6;
+                int n = (int)nupN.Value, k = (int)nupK.Value;
                 int res = df.dfcount(n, k);
-                MessageBox.Show(res.ToString());
+                MessageBox.Show(String.Format("Total number of arrays Hero likes is: {0}", res.ToString()), "Result");
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void rtbResult_TextChanged(object sender, EventArgs e)
+        {
+            rtbResult.SelectionStart = rtbResult.Text.Length;
+            rtbResult.ScrollToCaret();
         }
     }
 }
