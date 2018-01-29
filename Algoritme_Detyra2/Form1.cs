@@ -24,8 +24,8 @@ namespace Algoritme_Detyra2
                 DivFree df = new DivFree();
                 int n = (int)nupN.Value, k = (int)nupK.Value;
                 int res = df.dfcount(n, k);
+                rtbResult.Text = df.QueueToString();
                 MessageBox.Show(String.Format("Total number of arrays Hero likes is: {0}", res.ToString()), "Result");
-
             }
             catch (Exception ex)
             {

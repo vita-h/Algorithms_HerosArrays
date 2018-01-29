@@ -34,7 +34,6 @@
             this.lblN = new System.Windows.Forms.Label();
             this.lblK = new System.Windows.Forms.Label();
             this.rtbResult = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupK)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +51,11 @@
             // nupN
             // 
             this.nupN.Location = new System.Drawing.Point(151, 7);
+            this.nupN.Maximum = new decimal(new int[] {
+            50000,
+            0,
+            0,
+            0});
             this.nupN.Minimum = new decimal(new int[] {
             1,
             0,
@@ -69,6 +73,11 @@
             // nupK
             // 
             this.nupK.Location = new System.Drawing.Point(332, 7);
+            this.nupK.Maximum = new decimal(new int[] {
+            50000,
+            0,
+            0,
+            0});
             this.nupK.Minimum = new decimal(new int[] {
             1,
             0,
@@ -103,7 +112,9 @@
             // 
             // rtbResult
             // 
+            this.rtbResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.rtbResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.rtbResult.Location = new System.Drawing.Point(15, 41);
             this.rtbResult.Name = "rtbResult";
             this.rtbResult.ReadOnly = true;
@@ -112,22 +123,11 @@
             this.rtbResult.Text = "";
             this.rtbResult.TextChanged += new System.EventHandler(this.rtbResult_TextChanged);
             // 
-            // button2
-            // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(505, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Continue";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 487);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.rtbResult);
             this.Controls.Add(this.lblK);
             this.Controls.Add(this.lblN);
@@ -151,7 +151,6 @@
         private System.Windows.Forms.Label lblN;
         private System.Windows.Forms.Label lblK;
         private System.Windows.Forms.RichTextBox rtbResult;
-        private System.Windows.Forms.Button button2;
     }
 }
 

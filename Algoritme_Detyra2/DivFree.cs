@@ -69,5 +69,14 @@ namespace Algoritme_Detyra2
             
             return false;
         }
+
+        public string QueueToString()
+        {
+            string s = "";
+            foreach (var item in Q)
+                s += "  { " + string.Join(", ", item) + " }  \n";
+
+            return s;
+        }
     }
 }
