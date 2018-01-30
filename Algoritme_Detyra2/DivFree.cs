@@ -6,6 +6,22 @@ using System.Threading.Tasks;
 
 namespace Algoritme_Detyra2
 {
+    class DistinctListComparer : IEqualityComparer<List<int>>
+    {
+        public bool Equals(List<int> x, List<int> y)
+        {
+            if (x.SequenceEqual(y))
+                return true;
+            else
+                return false;
+        }
+
+        public int GetHashCode(List<int> obj)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     class DivFree
     {
         Queue<List<int>> Q;
@@ -39,7 +55,7 @@ namespace Algoritme_Detyra2
                         {
                             List<int> newList = new List<int>(current);
                             newList.Insert(l, KArray[j]);
-                            if (CheckValidity(newList) && !CheckIsInQueue(newList))
+                            if (CheckValidity(newList) && !Q.Contains(newList, new DistinctListComparer()))
                                 Q.Enqueue(newList);
                         }
                     }
