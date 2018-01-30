@@ -80,15 +80,6 @@ namespace Algoritme_Detyra2
             return true;
         }
 
-        private bool CheckIsInQueue(List<int> l)
-        {
-            foreach (var item in Q)
-                if (l.SequenceEqual(item))
-                    return true;
-            
-            return false;
-        }
-
         public string QueueToString()
         {
             string s = "";
